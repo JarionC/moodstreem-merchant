@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+   }
+
+   a, link{
+       text-decoration: none;
+   }
+
+   body{
+       overflow-x:hidden;
+    }
+
+.nav-container{
+    z-index:10;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top:0px;
+    color: white; 
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: 1px black solid;
+    transition: background-color .5s ease, color .5s ease, border-bottom .5s ease;    
+}
+
+.nav-container:hover{
+    background-color: white;
+    color: black; 
+    border-bottom: 1px rgb(209, 209, 209) solid;
+    transition: background-color .5s ease, color .5s ease, border-bottom .5s ease;    
+}
+
+.nav-container > .brand{
+    text-decoration: none;
+    margin-right: auto;
+    margin-left:20px;
+    color:inherit;
+    font-weight:700;
+    display: flex;
+    flex-direction: row;
+    opacity:100%;
+    transition: opacity .3s ease;
+}
+
+
+
+.brand > .logo-span{
+    display:inline-block;
+    width:30px;
+    vertical-align:top;
+    
+}
+
+.brand > .brand-text{
+}
+
+.nav-container > .link-container{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex; 
+    flex-direction:row;
+    column-gap: 20px;
+    
+}
+
+.link-container > .link{
+    list-style: none;
+    font-weight: 500;
+    opacity:100%;
+    transition: opacity .3s ease;
+    
+}
+
+.link-container > .link:hover{
+    opacity:30%;
+    transition: opacity .3s ease;
+}
+
+.link-container > .link > a {
+    color:inherit;
+}
+
+.icon-filter{
+    /*filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);*/
+    filter: brightness(0) invert(1);
+    transition: filter .5s ease;
+}
+
+
+.nav-container:hover > a > .logo-span > svg > .icon-filter {
+    filter: brightness(0);
+    transition: filter .5s ease;
+}
+
+.nav-container:hover > a > .logo-span > svg > .icon-filter:hover {
+    filter: brightness(1) contrast(10%);
+    transition: filter .5s ease;
+}
+.nav-container > .brand:hover{
+    opacity:30%;
+    transition: opacity .3s ease;
+}
+
+.footer-container{
+    width:100%;
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    position:sticky;
+    bottom:0px;
+}
+
+.footer-brand{
+    display:flex;
+    margin-right:auto;
+    margin-left: 20px;
+    padding:5px;
+    
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:row;
+    margin-left:auto;
+    margin-right:20px;
+}
+
+.footer-link{
+    font-size:.8em;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    border:none;
+    background-color:transparent;
+
+}
